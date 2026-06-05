@@ -1,0 +1,9 @@
+.mc-texture-background {
+	background-color: #121212;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), var(--mc-texture-image);
+	background-repeat: repeat;
+	background-size: 192px 192px;
+	background-attachment: fixed;
+    image-rendering: crisp-edges;
+}
+
