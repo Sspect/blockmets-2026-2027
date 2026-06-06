@@ -14,8 +14,40 @@ document.addEventListener('DOMContentLoaded', async () => {
 		}
 	}
 
+	await renderUnderConstructionNotice();
+
 	applyMinecraftTextureBackground();
 });
+
+async function renderUnderConstructionNotice() {
+	if (!window.underConstruction || document.getElementById('underConstructionNotice')) {
+		return;
+	}
+
+	try {
+		const response = await fetch('assets/html/under-construction.html');
+
+		if (!response.ok) {
+			return;
+		}
+
+		const noticeWrapper = document.createElement('div');
+		noticeWrapper.innerHTML = await response.text();
+		document.body.appendChild(noticeWrapper);
+
+		const closeButton = document.querySelector('[data-close-under-construction]');
+		if (closeButton) {
+			closeButton.addEventListener('click', () => {
+				const notice = document.getElementById('underConstructionNotice');
+				if (notice) {
+					notice.remove();
+				}
+			});
+		}
+	} catch (error) {
+		console.warn('Unable to load under construction component.', error);
+	}
+}
 
 function setActiveHeaderLinkWithBee() {
 	const currentPage = (window.location.pathname.split('/').pop() || 'index.html').split('?')[0].split('#')[0] || 'index.html';
