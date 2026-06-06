@@ -6,12 +6,49 @@
 		z-index: 1080;
 		max-width: 360px;
 		width: calc(100vw - 2rem);
-		background: rgba(33, 37, 41, 0.95);
+		background: rgb(33, 37, 41);
 		color: #f8f9fa;
-		border: 1px solid rgba(255, 255, 255, 0.2);
 		border-radius: 0.75rem;
-		box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
+		border: 3px solid rgba(123, 132, 1, 0.405);
 		padding: 0.75rem;
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 0.75rem;
+		align-items: center;
+	}
+
+	#underConstructionNotice .notice-icon-col {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#underConstructionNotice .notice-icon {
+		width: 52px;
+		height: 52px;
+		image-rendering: pixelated;
+		display: block;
+	}
+
+	#underConstructionNotice .notice-content {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		min-width: 0;
+	}
+
+	#underConstructionNotice .notice-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+	}
+
+	#underConstructionNotice .notice-title {
+		margin: 0;
+		font-size: 1rem;
+		line-height: 1.2;
+		text-transform: none;
 	}
 
 	#underConstructionNotice .notice-close {
@@ -22,7 +59,6 @@
 		line-height: 1;
 		padding: 0.2rem 0.35rem;
 		cursor: pointer;
-		margin-left: auto;
 		flex-shrink: 0;
 	}
 
@@ -30,49 +66,22 @@
 		opacity: 0.8;
 	}
 
-	#underConstructionNotice .notice-body {
-		display: flex;
-		gap: 0.75rem;
-		align-items: flex-start;
-	}
-
-	#underConstructionNotice .notice-icon {
-		width: 52px;
-		height: 52px;
-		image-rendering: pixelated;
-		flex-shrink: 0;
-	}
-
-	#underConstructionNotice .notice-title {
-		margin: 0;
-		font-size: 1rem;
-		line-height: 1.2;
-		text-transform: none;
-	}
-
-	#underConstructionNotice .notice-header {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 0.5rem;
-	}
-
 	#underConstructionNotice .notice-text {
-		margin: 0.25rem 0 0;
+		margin: 0;
 		font-size: 0.9rem;
 		line-height: 1.35;
 	}
 </style>
 
 <aside id="underConstructionNotice" aria-live="polite" aria-label="Under construction notice">
-	<div class="notice-body">
+	<div class="notice-icon-col">
 		<img class="notice-icon" src="assets/img/icons/Stone-pickaxe.png" alt="Stone pickaxe icon">
-		<div>
-			<div class="notice-header">
-				<h2 class="notice-title">Under construction</h2>
-				<button type="button" class="notice-close" aria-label="Close under construction notice" data-close-under-construction>x</button>
-			</div>
-			<p class="notice-text">Until the new season, this website is under construction.</p>
+	</div>
+	<div class="notice-content">
+		<div class="notice-header">
+			<h2 class="notice-title">Under construction</h2>
+			<button type="button" class="notice-close" aria-label="Close under construction notice" data-close-under-construction>x</button>
 		</div>
+		<p class="notice-text">Until the new season, this website is under construction.</p>
 	</div>
 </aside>

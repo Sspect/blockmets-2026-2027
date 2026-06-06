@@ -1,8 +1,24 @@
 .header-background {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../assets/img/minecraft-Textures/portal.gif");
+	position: relative;
+	overflow: hidden;
+}
+
+.header-background::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%), url("../assets/img/minecraft-Textures/portal.gif");
 	background-repeat: repeat;
 	background-size: 192px 192px;
-	
+	-webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 55%, rgba(0, 0, 0, 0) 100%);
+	mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 55%, rgba(0, 0, 0, 0) 100%);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.header-background > * {
+	position: relative;
+	z-index: 1;
 }
 
 .navbar-nav .nav-link {
@@ -23,4 +39,22 @@
 	height: 40px;
 	object-fit: contain;
 	flex-shrink: 0;
+}
+
+.navbar-brand .navbar-brand-bee {
+	width: 34px;
+	height: 34px;
+	margin-left: 8px;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+.navbar-brand .img-fluid {
+	transition: transform 0.25s ease;
+	transform-origin: center;
+}
+
+.navbar-brand:hover .img-fluid,
+.navbar-brand:focus-visible .img-fluid {
+	transform: scale(1.06);
 }

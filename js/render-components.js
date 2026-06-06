@@ -52,6 +52,27 @@ async function renderUnderConstructionNotice() {
 function setActiveHeaderLinkWithBee() {
 	const currentPage = (window.location.pathname.split('/').pop() || 'index.html').split('?')[0].split('#')[0] || 'index.html';
 	const navLinks = document.querySelectorAll('#siteHeaderNav .nav-link');
+	const navbarBrand = document.querySelector('.navbar-brand');
+
+	if (navbarBrand) {
+		const isIndexPage = currentPage === 'index.html';
+		const existingBrandBee = navbarBrand.querySelector('.navbar-brand-bee');
+
+		if (isIndexPage && !existingBrandBee) {
+			const brandBee = document.createElement('img');
+			brandBee.src = 'assets/img/decorations/Baby_Bee_BE2.gif';
+			brandBee.alt = '';
+			brandBee.width = 34;
+			brandBee.height = 34;
+			brandBee.className = 'navbar-brand-bee';
+			brandBee.setAttribute('aria-hidden', 'true');
+			navbarBrand.appendChild(brandBee);
+		}
+
+		if (!isIndexPage && existingBrandBee) {
+			existingBrandBee.remove();
+		}
+	}
 
 	navLinks.forEach((link) => {
 		const href = link.getAttribute('href') || '';
