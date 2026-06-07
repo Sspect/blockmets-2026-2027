@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mapImage: 'assets/img/Archives/maps/map-2025-2026.png',
             logo: 'assets/img/Archives/old-logos/logo-2025-2026.png',
             worldDownload: '#',
-            oldWebsite: 'https://sspect.github.io/blockmets',
+            oldWebsite: 'https://sspect.github.io/blockmets-2025-2026/',
             summary: "A season with relatively few long-term active players, likely due to a lack of server-run events.",
             screenshots: [
                 'assets/img/Archives/screenshots-2025-2026/Screenshot 2026-06-05 232958.png',

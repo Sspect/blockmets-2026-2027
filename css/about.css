@@ -1,0 +1,13 @@
+.about-page {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../assets/img/minecraft-Textures/Oak_Log_(texture)_JE4_BE2.png');
+	background-repeat: repeat;
+	background-size: 192px 192px;
+	image-rendering: crisp-edges;
+}
+
+.about-highlight-panel {
+	background-image: linear-gradient(rgba(18, 18, 18, 0.2), rgba(18, 18, 18, 0.2)), url('../assets/img/minecraft-Textures/Oak_Planks_(texture)_JE6_BE3.png');
+	background-repeat: repeat;
+	background-size: 192px 192px;
+	image-rendering: crisp-edges;
+}

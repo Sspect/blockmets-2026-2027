@@ -9,17 +9,38 @@
 	<link href="css/global.css" rel="stylesheet">
 	<link href="css/texture-background.css" rel="stylesheet">
 	<link href="css/header.css" rel="stylesheet">
+	<link href="css/about.css" rel="stylesheet">
 	<script defer src="js/settings.js"></script>
 	<script defer src="js/render-components.js"></script>
 </head>
-<body class="bg-body text-body">
+<body class="bg-body text-body about-page">
 	<div id="header" class="sticky-top"></div>
-
+	
 	<main class="container py-5">
 		<h1 class="mb-4">About</h1>
-		<div class="card bg-body-tertiary border-0">
-			<div class="card-body">
-				<p class="mb-0">p</p>
+		<p class="mb-0">p</p>
+		<div class="p-4 p-md-5 mb-5 text-body-emphasis about-highlight-panel rounded-3">
+			<div class="row g-4">
+				<div class="col-lg-6">
+					<div class="d-flex align-items-start gap-3 h-100 p-3 rounded-3 border bg-body-tertiary bg-opacity-75">
+						<img src="assets/img/icons/archive-icon.png" alt="" width="48" height="48" aria-hidden="true" class="flex-shrink-0">
+						<div>
+							<h1 class="h3 mb-2">Archives</h1>
+							<p class="mb-3">Browse the current archive page for past seasons, maps, and screenshots.</p>
+							<a class="btn btn-outline-light" href="archive.html">Open Archives</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="d-flex align-items-start gap-3 h-100 p-3 rounded-3 border bg-body-tertiary bg-opacity-75">
+						<img src="assets/gif/Compass.gif" alt="" width="48" height="48" aria-hidden="true" class="flex-shrink-0">
+						<div>
+							<h2 class="h3 mb-2">Server Operation Wiki</h2>
+							<p class="mb-3">This Wiki is mainly for whoever is operating the OMG Minecraft server.</p>
+							<a class="btn btn-outline-light" href="https://github.com/Sspect/blockmets/wiki" target="_blank" rel="noopener noreferrer">Open Wiki</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>

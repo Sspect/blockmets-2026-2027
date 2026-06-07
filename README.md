@@ -24,3 +24,4 @@ Official website for the BlockMets 2026-2027 season.
 - https://minecraft.wiki/w/Category:Gifs
 - https://minecraft.wiki/w/List_of_block_textures
 - https://www.youtube.com/@minecraft
+- https://www.rw-designer.com/cursor-set/minecraft-tools
